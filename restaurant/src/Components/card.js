@@ -1,0 +1,26 @@
+import "./card.css";
+
+const lorem = "description is unavailable";
+
+const Card = ({ data }) => {
+  return (
+    <>
+      <div className="card">
+        <div className="img"   style={{
+    background: `url("${data.image}") no-repeat center / cover`,
+  }}></div>
+        <div className="content">
+          <span className="price">
+            <span>{`${data.price}`}</span>
+          </span>
+          <div className="pd white">
+            <h5>{data.name}</h5>
+            <p>{data.description ? data.description : lorem}</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Card;
